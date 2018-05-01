@@ -1,33 +1,47 @@
-<%= form_for(@usuario) do |f| %>
-  <% if @usuario.errors.any? %>
+<section class="c-contain">
+<section class="c-centered">
+<%= form_with(model: usuario, local: true) do |form| %>
+  <% if usuario.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+      <h2><%= pluralize(usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
 
       <ul>
-      <% @usuario.errors.full_messages.each do |message| %>
+      <% usuario.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :cpf %><br>
-    <%= f.text_field :cpf %>
+  <div class="styled-input">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf, id: :usuario_cpf %>
+    <span></span>
   </div>
-  <div class="field">
-    <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
+
+  <div class="styled-input">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :usuario_nome %>
+    <span></span>
   </div>
-  <div class="field">
-    <%= f.label :login %><br>
-    <%= f.text_field :login %>
+
+  <div class="styled-input">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :usuario_email %>
+    <span></span> 
+
   </div>
-  <div class="field">
-    <%= f.label :senha %><br>
-    <%= f.text_field :senha %>
+
+  <div class="styled-input">
+    <%= form.label :senha %>
+    <%= form.text_field :senha, id: :usuario_senha %>
+    <span></span>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    <button><%= form.submit 'Cadastrar', :class => 'remove-submit-btn-style' %></button>
+    <button><%= link_to 'Voltar', usuarios_path %></button>
   </div>
+
 <% end %>
+    </section>
+  </section>

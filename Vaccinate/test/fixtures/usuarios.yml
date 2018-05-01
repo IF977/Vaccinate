@@ -3,11 +3,11 @@
 one:
   cpf: MyString
   nome: MyString
-  login: MyString
+  email: MyString
   senha: MyString
 
 two:
   cpf: MyString
   nome: MyString
-  login: MyString
+  email: MyString
   senha: MyString

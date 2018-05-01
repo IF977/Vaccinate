@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Vaccinate</title>
+  <link rel="shortcut icon" href="icon.ico"/>
+  <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <!--Preloader-->
+  <div class="loading">
+    <div class="svg-wrapper">
+      <svg height="150" width="150" xmlns="http://www.w3.org/2000/svg">
+      <rect class="animate" height="150" width="150" />
+    </svg>
+      <div class="text">
+        <span class="logo"><img src="logo.png"></span>
+        <span class="motto">Vaccinate</span>
+      </div>
+    </div>
+  </div>
+
+  <!--SVG animation-->
+  <script>
+    var p = document.querySelector('.animate'),
+      offset = 600;
+    var offsetMe = function() {
+      if (offset < 0) {
+        offset = 600;
+      }
+      p.style.strokeDashoffset = offset;
+      offset = offset - 5;
+      requestAnimationFrame(offsetMe);
+    }
+    offsetMe();
+  </script>
+  
+  <!--Homepage-->
+  <div class="wrapper">
+    <div class="landing"></div>
+  </div>
+
+  <!--Intro text scroll-->
+  <div class="content-1">
+    <span class="one">Vaccinate</span>
+    <span class="two">Vacinar é proteger!</span>
+    <span class="three">Não espere, vacine!</span>
+  </div>
+
+  <!--Mouse scroller-->
+  <span class="mouseScroll"></span>
+
+  <!--About section-->
+  <div class="about">
+
+    <div class="hideme">
+      <h1>Sobre o Vaccinate</h1>
+    </div>
+
+    <div class="hideme">
+      <div id="mission"> 
+        <p>O Vaccinate é uma aplicação web que funciona como um calendário de vacinação online. Através de um sistema de notificações cujo objetivo é manter a carteira de vacinação de crianças e adolescentes recifenses em dia. Além disso, o Vaccinate torna o processo mais prático através de uma busca automática do posto de atendimento médico mais próximo e seus horários de funcionamento.</p>
+      </div>
+    </div>
+
+    <!--Contact box-->
+    <div class="hideme">
+      <div class="container"></div>
+      <div class="cube">
+        <div class="default-state">
+          <span>Contate-nos</span>
+        </div>
+        <div class="active-state">
+          <span>vaccinate@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Sponsors section-->
+  <div class="sponsors">
+    <div class="hideme">
+      <h2>Seu Calendário de Vacinação Online</h2>
+    </div>
+  </div>
+</body>
+</html>

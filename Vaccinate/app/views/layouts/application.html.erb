@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Vaccinate</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Vaccinate</title>
+    <%= favicon_link_tag 'icon.ico' %>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  </html>
+  
+<!--Desktop Navigation-->
+  <span class="desktop">
+    <header>
+      <span id="logo"><%= image_tag("logo.png")%></span>
+      <nav>
+      	<%= link_to "Home", root_path %>
+        <a href="#">Login</a>
+        <%= link_to "Cadastre-se", new_usuario_path %>
+        <a href="#">Vaccinate</a>
+      </nav>
+    </header>
+  </span>
 
-<%= yield %>
+  <!--Mobile Navigation-->
+  <span class="mobile">
+    <header>
+      <span id="logo"><img src="logo.png"></span>
+      <div class="button_container">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+    </header>
 
-</body>
-</html>
+    <div class="overlay">
+      <nav>
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><a href="#">Login</a></li>
+          <li><%= link_to "Cadastre-se", new_usuario_path %></li>
+          <li><a href="#">Vaccinate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </span>
+  <body>
+    <%= yield %>
+  <!--Social section-->
+  <div class="social">
+    <span class="hideme">
+      <a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+    </span>
+  </div>
+  </body>
+  <%= javascript_include_tag 'application' %>
