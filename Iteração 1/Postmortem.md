@@ -22,7 +22,7 @@ Todas as atividades listadas acima, porém o processo de verificação/autentica
 | -  | - |
 | Continuação do processo de verificação/autenticação de requisição  | Vitor Lima |
 | Identidade visual da aplicação | Time |
-| configuração de rotas | Gabriel D'Luca |
+| configuração de rotas | Time |
 | Front-end da página inicial | Vitor Lima, Ruan Vieira e Ricardo Ferreira |
 | Deploy inicial | Time |
 
