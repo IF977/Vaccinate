@@ -83,29 +83,6 @@ i,em {
 	font-style: italic;
 }
 
-input,
-select,
-textarea,
-button {
-	-webkit-appearance: none;
-	border-radius: 0;
-}
-
-textarea {
-	resize: none;
-}
-
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-
-
-//-----------------------------------------------------------
-// REUSABLES
-//-----------------------------------------------------------
-
 .frame {
 	display: table;
 	height: 100%;

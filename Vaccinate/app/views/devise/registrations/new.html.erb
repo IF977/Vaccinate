@@ -1,0 +1,38 @@
+<div class="site__container">
+  <div class="grid__container">
+<div class= 'centered' >
+<%= form_for resource, as: resource_name, url: registration_path(resource_name), html: {class: "form form--login"} do |f| %>
+  <%= devise_error_messages! %>
+
+    <div class="form__field">
+    <label class="fontawesome-user" for="email">
+      <span class="hidden">E-mail</span>
+    </label>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail"%>
+  </div>
+
+   <div class="form__field">
+      <label class="fontawesome-lock" for="password">
+        <span class="hidden">Senha</span>
+      </label>
+    <% if @minimum_password_length %>
+    <% end %><br />
+   <%= f.password_field :password, autocomplete: "off", placeholder: 'Senha' %>
+  </div>
+
+  <div class="form__field">
+      <label class="fontawesome-lock" for="password_confirmation">
+        <span class="hidden">Senha</span>
+      </label>
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirme a senha" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Cadastre-se" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
+</div>
+</div>

@@ -613,170 +613,135 @@ body.loaded {
    background-color:#3d3d3d;
  }
 
-  .c-contain{
-    position: absolute;
-    top: 20%;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: auto;;
-    }
-
-
-
-  .c-centered{
-    width:50%;
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-  }
-
-  .c-centered p{
-    color: #73b233;
-    font-family: CantataOne-Regular;
-    font-size: 1em;
-    margin-top: 2%;
-}
-
-    .c-centered h1 {
-      font-family: georgia;
-      color: #fff;
-      font-size: 2.5em;
-      font-weight: bolder;
-      margin-top: 5%;
-  }
-
-/* BUTTON */
-  .c-centered button{
-    font-size: 15px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    border: 1px solid #73b233;
-    color: #fff;
-    background: transparent;
-    text-align: right !important;
-    padding: 15px 70px;
-    transition: .3s ease-in;
-    margin-bottom: 5%;
-  }
-
-  .c-centered button:hover{
-    background-color: #73b233;
-    border: none;
-    cursor: pointer;
-  }
-
-
-/* input starts here */
-input:focus ~ label,
-textarea:focus ~ label,
-input:valid ~ label,
-textarea:valid ~ label {
-  font-size: 1em;
-  color: #73b233;
-  top: -2.25rem;
-  -webkit-transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-}
-
-.styled-input {
-  float: none;
-  width: 75.3333%;
-  margin: 2rem 0 1rem;
-  position: relative;
-  margin: 5% auto;
-}
-
-.styled-input label {
-  color: #999;
-  padding: 1rem;
+.centered {
   position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
-  pointer-events: none;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.styled-input.wide {
-  width: 100%;
+
+body {
+  background-color: #2c3338;
+  color: #606468;
+  font: 400 0.875rem/1.5 "Open Sans", sans-serif;
+  margin: 0;
+  min-height: 100%;
 }
 
-input,
-textarea {
-  padding: 1rem 1rem;
-  border: 0;
-  width: 100%;
-  font-size: 1rem;
-  border-bottom: 1px solid #73b233 !Important;
-  background-color: transparent;
-  border: none;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  color: #fff;
-  left: 0;
-  border-left: none;
-  right: 0;
-}
-
-input ~ span,
-textarea ~ span {
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #73b233;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-}
-
-input:focus,
-textarea:focus {
+a {
+  color: #eee;
   outline: 0;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
+  text-decoration: none;
+}
+a:focus, a:hover {
+  text-decoration: underline;
 }
 
-input:focus ~ span,
-textarea:focus ~ span {
-  width: 106%;
-  -webkit-transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
-  transition: all 0.125s cubic-bezier(0.2, 0, 0.03, 1);
+input {
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
 }
 
-textarea {
+.site__container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3rem 0;
+}
+
+.form input[type="password"], .form input[type="email"], .form input[type="submit"] {
   width: 100%;
-  min-height: 15em;
+}
+.form--login {
+  color: #606468;
+}
+.form--login label,
+.form--login input[type="email"],
+.form--login input[type="password"],
+.form--login input[type="submit"] {
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+.form--login label {
+  background-color: #363b41;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.form--login input[type="email"], .form--login input[type="password"] {
+  background-color: #3b4148;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.form--login input[type="text"]:focus, .form--login input[type="email"]:hover, .form--login input[type="password"]:focus, .form--login input[type="password"]:hover {
+  background-color: #434A52;
+}
+.form--login input[type="submit"] {
+  background-color: #73b233;
+  color: #eee;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.form--login input[type="submit"]:focus, .form--login input[type="submit"]:hover {
+  background-color: #73b150;
+  color: black;
+}
+.form__field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.form__input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-@media only screen and (max-width: 500px) {
-  /*FORM CADASTRO*/
-  .c-centered h1 {
-    font-family: georgia;
-    color: #fff;
-    font-size: 28px;
-    font-weight: bolder;
-    margin-top: 15%;
-  }
-  .c-centered {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-  }
-  .styled-input {
-    float: none;
-    width: 75.3333%;
-    margin: 2rem 0 1rem;
-    position: relative;
-    margin: 10% auto;
-  }
+.align {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.grid__container {
+  margin: 0 auto;
+  max-width: 20rem;
+  width: 90%;
 }
