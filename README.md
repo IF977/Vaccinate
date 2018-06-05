@@ -6,7 +6,7 @@ Projeto da disciplina (IF977) Engenharia de Software, do curso de graduação em
 * Matheus Heliodoro: Desenvolvedor Full-stack
 * Ricardo Ferreira: Product Owner e Desenvolvedor Back-end
 * Ruan Vieira: Desenvolvedor Front-end e de Testes
-* Vitor Lima: Gerente de Projeto e Desenvolvedor Full-stack  
+* Vitor Lima: Gerente de Projeto e Desenvolvedor Full-stack (Desistiu da disciplina) 
 
 ## Descrição
 O Vaccinate é uma aplicação web que funciona como um calendário de vacinação online. Através de um sistema de notificações cujo objetivo é manter a carteira de vacinação de crianças e adolescentes recifenses em dia. Além disso, o Vaccinate torna o processo mais prático através de uma busca automática do posto de atendimento médico mais próximo e seus horários de funcionamento.
