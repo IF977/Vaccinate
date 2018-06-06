@@ -23,7 +23,8 @@
 
         <% if usuario_signed_in? %>
           <a href="#">Meu Perfil</a>
-	<%= link_to "Vacinas", vacinas_path %>
+	        <%= link_to "Vacinas", vacinas_path %>
+          <%= link_to "Postos de Saúde", postos_path %>
           <%= link_to "Logout", destroy_usuario_session_path, method: :delete %>
         <% end %>
       </nav>

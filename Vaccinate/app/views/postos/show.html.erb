@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @posto.id %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @posto.nome %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @posto.endereco %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @posto.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @posto.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_posto_path(@posto) %> |
+<%= link_to 'Back', postos_path %>
