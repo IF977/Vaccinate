@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vacinas
   resources :postos
   devise_for :usuarios, :controllers => { :omniauth_callbacks => "callbacks" }
   get 'home/index' => 'home#index'

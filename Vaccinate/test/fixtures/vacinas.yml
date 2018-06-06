@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idade: MyString
+  vacina: MyString
+  doenca_protecao: MyString
+  dose: MyString
+  dose_qtd: MyString
+  via_administacao: MyString
+
+two:
+  idade: MyString
+  vacina: MyString
+  doenca_protecao: MyString
+  dose: MyString
+  dose_qtd: MyString
+  via_administacao: MyString

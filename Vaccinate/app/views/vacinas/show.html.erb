@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idade:</strong>
+  <%= @vacina.idade %>
+</p>
+
+<p>
+  <strong>Vacina:</strong>
+  <%= @vacina.vacina %>
+</p>
+
+<p>
+  <strong>Doenca protecao:</strong>
+  <%= @vacina.doenca_protecao %>
+</p>
+
+<p>
+  <strong>Dose:</strong>
+  <%= @vacina.dose %>
+</p>
+
+<p>
+  <strong>Dose qtd:</strong>
+  <%= @vacina.dose_qtd %>
+</p>
+
+<p>
+  <strong>Via administacao:</strong>
+  <%= @vacina.via_administacao %>
+</p>
+
+<%= link_to 'Edit', edit_vacina_path(@vacina) %> |
+<%= link_to 'Back', vacinas_path %>

@@ -1,0 +1,47 @@
+<%= form_with(model: vacina, local: true) do |form| %>
+  <% if vacina.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vacina.errors.count, "error") %> prohibited this vacina from being saved:</h2>
+
+      <ul>
+      <% vacina.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idade %>
+    <%= form.text_field :idade, id: :vacina_idade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vacina %>
+    <%= form.text_field :vacina, id: :vacina_vacina %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doenca_protecao %>
+    <%= form.text_field :doenca_protecao, id: :vacina_doenca_protecao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dose %>
+    <%= form.text_field :dose, id: :vacina_dose %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dose_qtd %>
+    <%= form.text_field :dose_qtd, id: :vacina_dose_qtd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :via_administacao %>
+    <%= form.text_field :via_administacao, id: :vacina_via_administacao %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
