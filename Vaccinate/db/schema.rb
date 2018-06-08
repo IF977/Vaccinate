@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180606124514) do
+ActiveRecord::Schema.define(version: 20180606132007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,17 @@ ActiveRecord::Schema.define(version: 20180606124514) do
     t.string "uid"
     t.index ["email"], name: "index_usuarios_on_email", unique: true
     t.index ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true
+  end
+
+  create_table "vacinas", force: :cascade do |t|
+    t.string "idade"
+    t.string "vacina"
+    t.string "doenca_protecao"
+    t.string "dose"
+    t.string "dose_qtd"
+    t.string "via_administacao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -4,10 +4,9 @@ class PostosController < ApplicationController
   # GET /postos
   # GET /postos.json
   def index
-    @postos = Posto.all
 
     @postos = Posto.all
-    @hash = Gmaps4rails.build_markers(@users) do |posto, marker|
+    @hash = Gmaps4rails.build_markers(@postos) do |posto, marker|
     marker.lat posto.latitude
     marker.lng posto.longitude
 end
