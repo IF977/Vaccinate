@@ -171,7 +171,7 @@ body.loaded {
   }
 
  header img {
-    border: 1px solid red; 
+    border: 1px solid red;
     /*transform: rotate(40deg);*/
   }
   #logo {
@@ -334,7 +334,7 @@ body.loaded {
   body {
     height: 3000px;
   }
-  
+
 }
 
 

@@ -4,11 +4,18 @@ class VacinasController < ApplicationController
   # GET /vacinas
   # GET /vacinas.json
   def index
-    @vacinas = Vacina.all
+     @vacinas = Vacina.all
+     dados_brutos =  HTTParty.get("http://dados.recife.pe.gov.br/api/action/datastore_search?resource_id=8222148c-14d1-47ba-ae0e-39c879246284")
+     @vacinacao_JSON = JSON.parse(dados_brutos.body)
+     @vacinacao = @vacinacao_JSON["result"]["records"]
+     puts @vacinacao
   end
 
   # GET /vacinas/1
   # GET /vacinas/1.json
+  def buscar_vacinas
+  end
+
   def show
   end
 
