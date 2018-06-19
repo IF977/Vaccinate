@@ -2,6 +2,10 @@
 
 Projeto da disciplina (IF977) Engenharia de Software, do curso de graduação em Sistemas de Informação do Centro de Informática da Universidade Federal de Pernambuco (UFPE).
 
+Link da aplicação no Heroku: http://vaccinate.herokuapp.com
+
+Screencast:https://youtu.be/565xghkpMPo
+
 ## Equipe:
 * Matheus Heliodoro: Desenvolvedor de Testes
 * Ricardo Ferreira: Product Owner e Desenvolvedor Back-end
