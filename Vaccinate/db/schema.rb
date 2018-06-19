@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180606132007) do
+ActiveRecord::Schema.define(version: 20180617065343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "meuperfils", force: :cascade do |t|
+    t.string "nome"
+    t.integer "idade"
+    t.boolean "vacina_tomada"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "postos", force: :cascade do |t|
     t.string "nome"

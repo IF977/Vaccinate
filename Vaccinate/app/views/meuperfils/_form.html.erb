@@ -1,0 +1,52 @@
+<%= form_with(model: meuperfil, local: true) do |form| %>
+  <% if meuperfil.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(meuperfil.errors.count, "error") %> prohibited this meuperfil from being saved:</h2>
+
+      <ul>
+      <% meuperfil.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div style="overflow: auto; width: 1250px; height: 400px; border:solid 1px; position:absolute; left: 10px; top: 130px">
+  <table border="2" width="30%" class="tabela" style="width:800px">
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :meuperfil_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idade %>
+    <%= form.number_field :idade, id: :meuperfil_idade %>
+  </div>
+
+
+
+
+<!--- gambiarra para acessar os dados, pois não estou conseguindo chamos no controlador --->
+  <ul>
+    <div class="form__field">
+      <label class="fontawesome-user" for="Vacinas">
+      <span class="hidden">Vacinas</span>
+      <% dados_brutos =  HTTParty.get("http://dados.recife.pe.gov.br/api/action/datastore_search?resource_id=8222148c-14d1-47ba-ae0e-39c879246284")%>
+      <%@vacinacao_JSON = JSON.parse(dados_brutos.body)%>
+      <%@vacinacao = @vacinacao_JSON["result"]["records"]%>
+          <% @vacinacao.each do |x| %>
+            <li>
+              <%= check_box_tag "vacinas_tomada[]", x, id: :meuperfil_vacina_tomada-%>
+              <%= h x['vacina'] -%>
+            </li>
+          <% end %>
+    </div>
+  </ul>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+</table>
+</div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @meuperfil.nome %>
+</p>
+
+<p>
+  <strong>Idade:</strong>
+  <%= @meuperfil.idade %>
+</p>
+
+<p>
+  <strong>Vacina tomada:</strong>
+  <%= @meuperfil.vacina_tomada %>
+</p>
+
+<%= link_to 'Edit', edit_meuperfil_path(@meuperfil) %> |
+<%= link_to 'Back', meuperfils_path %>

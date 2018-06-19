@@ -5,40 +5,42 @@ Feature: Login usuario
   
   Background: 
     Given Eu estou na home
-    When Eu clico no botao Login
-    Then Eu sou direcionado para a pagina de login
+    When Eu clico no botão Login
+    Then Eu sou direcionado para a página de Login
     
-  Scenario: Login Valido
-    Given Eu estou na pagina de login
-    When Eu coloco sub_13@gmail no campo E-mail
+  Scenario: Login Válido
+    Given Eu estou na pagina de Login
+    When Eu coloco Subets no campo Login
     And Eu coloco senhasecreta no campo Senha
-    And Eu clico no botão Log in
-    Then Eu sou direcionado para a pagina de usuario
+    And Eu clico no botão Entrar
+    Then Eu sou direcionado para a página de usuário
   
   Scenario: Login - senha invalida
-    Given Eu estou na pagina de login
-    When Eu coloco sub_13@gmail no campo E-mail
+    Given Eu estou na pagina de Login
+    When Eu coloco Subets no campo Login
     And Eu coloco senhaseceta no campo Senha
-    And Eu clico no botão Log in
-    Then Eu devo continuar na pagina de login
+    And Eu clico no botão Entrar
+    Then Eu devo ver a mensagem Senha incorreta
 
-  Scenario: Login - email vazio
-    Given Eu estou na pagina de login
-    When Eu coloco senhasecreta no campo Senha
-    And Eu clico no botão Log in
-    Then Eu devo continuar na pagina de login
+  Scenario: Login - Login vazio
+    Given Eu estou na pagina de Login
+    When Eu deixo em branco o campo Login
+    And Eu coloco senhasecreta no campo Senha
+    And Eu clico no botão Entrar
+    Then Eu devo ver a mensagem Por favor insira um login
     
   Scenario: Login - senha vazia
-    Given Eu estou na pagina de login
-    When Eu coloco sub_13@gmail no campo E-mail
-    And Eu clico no botão Log in
-    Then Eu devo continuar na pagina de login
+    Given Eu estou na pagina de Login
+    When Eu coloco Subets no campo Login
+    And Eu deixo em branco o campo Senha
+    And Eu clico no botão Entrar
+    Then Eu devo ver a mensagem Por favor insira uma senha
   
-  Scenario: Login - email invalido
-    Given Eu estou na pagina de login
-    When Eu coloco sub_13gmail.com no campo E-mail
+  Scenario: Login - login invalido
+    Given Eu estou na pagina de Login
+    When Eu coloco Subts no campo Login
     And Eu coloco senhasecreta no campo Senha
-    And Eu clico no botão Log in
-    Then Eu devo continuar na pagina de login
+    And Eu clico no botão Entrar
+    Then Eu devo ver a mensagem Login inexistente, crie uma conta para continuar
 
 

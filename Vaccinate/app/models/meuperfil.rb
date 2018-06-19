@@ -1,0 +1,2 @@
+class Meuperfil < ApplicationRecord
+end

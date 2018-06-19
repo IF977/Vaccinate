@@ -11,18 +11,19 @@
   <span class="desktop">
     <header>
       <span id="logo"><%= image_tag("logo.png")%></span>
-      
+
 
       <nav>
       	<%= link_to "Home", root_path %>
-	
+
         <% if !usuario_signed_in? %>
           <%= link_to "Login", new_usuario_session_path %>
           <%= link_to "Cadastre-se", new_usuario_registration_path %>
         <% end %>
 
         <% if usuario_signed_in? %>
-          <a href="#">Meu Perfil</a>
+
+          <%= link_to "Meu perfil", meuperfils_path %>
 	        <%= link_to "Vacinas", vacinas_path %>
           <%= link_to "Postos de Saúde", postos_path %>
           <%= link_to "Logout", destroy_usuario_session_path, method: :delete %>
